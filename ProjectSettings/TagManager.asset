@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Projectile
   - Axe
+  - Tree
   layers:
   - Default
   - TransparentFX
