@@ -23,7 +23,13 @@ public class TreeDestroyer : MonoBehaviour
         if(collision.gameObject.CompareTag("Axe"))
         {
             aS.PlayOneShot(breakSound);
-            Destroy(gameObject);
+            StartCoroutine(DestroyDelay());
         }
+    }
+
+    public IEnumerator DestroyDelay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject);
     }
 }
